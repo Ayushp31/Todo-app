@@ -3,10 +3,10 @@ import {TextField, Button, Paper, Grid} from '@mui/material'
 import AddCircleIcon from '@mui/icons-material/AddCircle'
 import TodoCard from './Components/TodoCard/TodoCard';
 import { useState,useEffect } from 'react';
-import data from './Utils/Dataset'
+//import data from './Utils/Dataset'
 
 function App() {
-  const [toDos, setToDos] = useState(data)
+  const [toDos, setToDos] = useState([])
   const btStyle = {cursor:'pointer', backgroundColor: "#F2CD5C", color:'black'}
   const paperStyle = {width: '100%'}
   useEffect(()=>{
