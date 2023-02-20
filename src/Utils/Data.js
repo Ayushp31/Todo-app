@@ -1,25 +1,25 @@
 let data = [
     {
         id: Math.random(),
-        title: "",
+        title: "react",
+        isCompleted:false,
+        isDeleted: false,
+    },
+    {
+        id: Math.random(),
+        title: "react",
         isCompleted: false,
         isDeleted: false,
     },
     {
         id: Math.random(),
-        title: "",
+        title: "react",
         isCompleted: false,
         isDeleted: false,
     },
     {
         id: Math.random(),
-        title: "",
-        isCompleted: false,
-        isDeleted: false,
-    },
-    {
-        id: Math.random(),
-        title: "n",
+        title: "react",
         isCompleted: false,
         isDeleted: false,
     },
