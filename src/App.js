@@ -1,9 +1,8 @@
 import './App.css';
-import { Box , TextField, Button, Paper, Grid} from '@mui/material'
+import {TextField, Button, Paper, Grid} from '@mui/material'
 import AddCircleIcon from '@mui/icons-material/AddCircle'
 import data from './Utils/Data';
 import TodoCard from './Components/TodoCard/TodoCard';
-import { AlignHorizontalCenter } from '@mui/icons-material';
 import { useState,useEffect } from 'react';
 
 function App() {
@@ -30,7 +29,7 @@ function App() {
 
   const completeHandler = (id) => {
     // let tempData = toDos
-    const todo = toDos.find(e => e.id == id)
+    const todo = toDos.find(e => e.id === id)
     todo.isCompleted = true
     setToDos([...toDos]) 
     localStorage.setItem("data",JSON.stringify(toDos))
@@ -38,7 +37,7 @@ function App() {
 
   const deleteHandler = (id) => {
     // let tempData = toDos
-    const todo = toDos.find(e => e.id == id)
+    const todo = toDos.find(e => e.id === id)
     todo.isDeleted = true
     setToDos([...toDos]) 
     localStorage.setItem("data",JSON.stringify(toDos))
@@ -81,12 +80,11 @@ function App() {
           <h4>Completed:</h4>
           <div className='card-list'>
             {
-              toDos.map((e) => {
+              toDos?.map((e) => {
                 if(e.isCompleted) {
-                  return (
-                       <TodoCard key={e.id} title={e.title} />)}
-                else{
-                  <></>
+                   return (!e.isDeleted && <TodoCard key={e.id} id={e.id} title={e.title} isCompleted={e.isCompleted} delete={deleteHandler}/>)
+                } else {
+                  return <></>
                 }
               })
             }
