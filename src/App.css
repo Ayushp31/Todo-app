@@ -1,0 +1,22 @@
+.main-container {
+  height: 100vh;
+  background: rgb(136, 212, 238);
+}
+
+.input-container {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction:row;
+  align-items: center;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+h4 {
+  padding-left: 20px;
+}
