@@ -1,9 +1,9 @@
 import './App.css';
 import {TextField, Button, Paper, Grid} from '@mui/material'
 import AddCircleIcon from '@mui/icons-material/AddCircle'
-import data from './Utils/Data';
 import TodoCard from './Components/TodoCard/TodoCard';
 import { useState,useEffect } from 'react';
+import data from './Utils/Dataset'
 
 function App() {
   const [toDos, setToDos] = useState(data)
@@ -36,7 +36,7 @@ function App() {
   }
 
   const deleteHandler = (id) => {
-    // let tempData = toDos
+
     const todo = toDos.find(e => e.id === id)
     todo.isDeleted = true
     setToDos([...toDos]) 
